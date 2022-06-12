@@ -1,0 +1,85 @@
+// Utilities for common `display` values
+// .d-sm-none, .d-md-flex etc
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .d#{$infix}-none         { display: none !important; }
+    .d#{$infix}-inline       { display: inline !important; }
+    .d#{$infix}-inline-block { display: inline-block !important; }
+    .d#{$infix}-block        { display: block !important; }
+    .d#{$infix}-flex         { display: flex !important; }
+    .d#{$infix}-inline-flex  { display: inline-flex !important; }
+    //.d#{$infix}-table        { display: table !important; }
+    //.d#{$infix}-table-row    { display: table-row !important; }
+    //.d#{$infix}-table-cell   { display: table-cell !important; }
+  }
+}
+
+.d-sm-none {
+  @include media-breakpoint-down(sm) {
+    display: none !important;
+  }
+}
+
+.dir-column {
+  flex-direction: column;
+}
+
+.h-start {
+  justify-content: flex-start;
+}
+
+.h-center {
+  justify-content: center;
+}
+
+.h-end {
+  justify-content: flex-end;
+}
+
+.h-between {
+  justify-content: space-between;
+}
+
+.h-around {
+  justify-content: space-around;
+}
+
+.v-start {
+  align-items: flex-start;
+}
+
+.v-center {
+  align-items: center;
+}
+
+.v-end {
+  align-items: flex-end;
+}
+
+.v-baseline {
+  align-items: baseline;
+}
+
+.v-stretch {
+  align-items: stretch;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.f-column {
+  flex-direction: column;
+}
+
+.f-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}

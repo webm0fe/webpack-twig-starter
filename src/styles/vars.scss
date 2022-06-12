@@ -1,0 +1,43 @@
+// Media breakpoints
+$grid-breakpoints: (
+    sm: 0,
+    md: 640px,
+    lg: 990px,
+    xl: 1360px,
+) !default;
+
+// Spacing sizes
+$spacers: () !default;
+$spacers: map-merge((
+    0: 0,
+    8: 8,
+    16: 16,
+    24: 24,
+    32: 32,
+    40: 40,
+    48: 48,
+    64: 64,
+    72: 72,
+    80: 80,
+    96: 96,
+    128: 128,
+), $spacers);
+
+$font-family-Montserrat: 'Montserrat', "Helvetica Neue", Arial, sans-serif !default;
+
+$colors: (
+    "light": var(--color-light),
+    "white": var(--color-white),
+    "black": var(--color-black),
+    "gray": var(--color-gray),
+    "primary": var(--color-primary),
+    "secondary": var(--color-secondary),
+    "accent": var(--color-accent),
+);
+
+$timing: 0.3s;
+$easing: ease;
+
+$z-header: 200;
+$z-footer: 100;
+$z-popup: 500;

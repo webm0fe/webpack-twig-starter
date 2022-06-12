@@ -1,0 +1,22 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  z-index: $z-header;
+}
+
+.footer {
+  z-index: $z-footer;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.container {
+}
